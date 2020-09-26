@@ -1,4 +1,4 @@
-package me.chan.spring.demo.model;
+package me.chan.spring.demo.entity;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;

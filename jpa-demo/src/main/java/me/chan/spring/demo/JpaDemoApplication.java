@@ -1,7 +1,7 @@
 package me.chan.spring.demo;
 
 import lombok.extern.slf4j.Slf4j;
-import me.chan.spring.demo.model.Coffee;
+import me.chan.spring.demo.entity.Coffee;
 import me.chan.spring.demo.repository.CoffeeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;

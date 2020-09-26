@@ -31,12 +31,6 @@ public class DataSourceDemoController {
     @PostMapping("fooInsert")
     public String insertDataWithFoo() {
         try {
-            /*
-            PreparedStatement ps = conn.prepareStatement("INSERT INO USER (id, name) VALUES (?, ?)");
-            ps.setString(1, "1");
-            ps.setString(2, "foo");
-            ResultSet rs = ps.executeQuery();
-            */
             String sql = "INSERT INTO USER (name) VALUES ('foo')";
             fooJdbc.execute(sql);
         } catch (Exception e) {
