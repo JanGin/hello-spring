@@ -9,10 +9,10 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>me.chan</groupId>
-    <artifactId>datasource-demo</artifactId>
+    <artifactId>auto-configuration-demo</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>datasource-demo</name>
-    <description>Datasource demo project for Spring Boot</description>
+    <name>auto-configuration-demo</name>
+    <description>Auto configuration demo project for Spring Boot</description>
 
     <properties>
         <java.version>1.8</java.version>
@@ -21,22 +21,25 @@
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-actuator</artifactId>
+            <artifactId>spring-boot-starter</artifactId>
         </dependency>
+
+        <!-- 下面这两个依赖可以从
+            https://github.com/digitalsonic/geektime-spring-family/tree/master/Chapter%209
+            这里下载并作为module导入进来使用
+         -->
         <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-jdbc</artifactId>
+            <groupId>geektime.spring.hello</groupId>
+            <artifactId>geektime-spring-boot-autoconfigure</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
         </dependency>
 
         <dependency>
-            <groupId>com.h2database</groupId>
-            <artifactId>h2</artifactId>
-            <scope>runtime</scope>
+            <groupId>geektime.spring.hello</groupId>
+            <artifactId>greeting</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
         </dependency>
+
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
