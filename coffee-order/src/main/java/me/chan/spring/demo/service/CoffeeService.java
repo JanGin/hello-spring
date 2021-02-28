@@ -4,6 +4,7 @@ import me.chan.spring.demo.dao.CoffeeRepository;
 import me.chan.spring.demo.model.Coffee;
 import org.joda.money.Money;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.CacheConfig;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
@@ -11,6 +12,7 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
+@CacheConfig(cacheNames = "CoffeeCache")
 public class CoffeeService {
 
     @Autowired
@@ -26,7 +28,6 @@ public class CoffeeService {
     }
 
     public Coffee getCoffee(Long id) {
-//        return coffeeRepository.findById(id).get();
         return coffeeRepository.getOne(id);
     }
 
